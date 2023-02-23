@@ -28,38 +28,62 @@ function my_keydown(e)
 	keyPressed = e.keyCode;
 	console.log(keyPressed);
 	
-		if((keyPressed >=97 && keyPressed<=122)|| (keyPressed >=65 && keyPressed<=90))
 	
-	else{
-		aplhabetkey();
+	if  ((keyPressed >=97 && keyPressed<=122)|| (keyPressed >=65 && keyPressed<=90))
+	{
+		alphabetkey();
 		document.getElementById("d1").innerHTML="você pressionou um tecla alfabeto";
-	}	console.log("aplhabet key")
+		console.log("alphabet key");
+	}
+	else if  (keyPressed >=48 && keyPressed<=40) 
+		{
+		numberkey();
+		document.getElementById("d1").innerHTML="Você pressionou uma tecla número";
+		console.log("number key")
+		}
+		else if(keyPressed >=37 && keyPressed<=40)
+		{
+		arrowkey();
+		document.getElementById("d1").innerHTML="você pressionou a tecla direcional ";
+	    console.log("arrow key");	
+		}
+		else if(keyPressed ==17 ) (keyPressed >=18 || keyPressed ==27)
+		{
+		specialkey();
+		document.getElementById("d1").innerHTML="você pressionou ctrl/esc/alt ";
+	    console.log("special key");	
+		}
+		
+		else (keyPressed >=37 && keyPressed<=40)
+		{
+		ortherkey();
+		document.getElementById("d1").innerHTML="você pressionou um simbolo ou uma outra  tecla ";	
+		}
 }
-
-function aplhabetkey()
-{
+		
+			
+		
 	
-	img_image="alfabeto.png";
-	add();
-}
+
+
 function numberkey()
 {
-	img_image="número.png";
-	add();
+	document.getElementById("d1").innerHTML="você pressionou um tecla número";
+		console.log("Number key")
 }
 function arrowkey()
 {
-	img_image="direcional.png";
-	add();
-}
+	document.getElementById("d1").innerHTML="você pressionou um tecla alfabeto";
+	}	console.log("Arrow key")
+
 function specialkey()
 {
-	img_image="especial.png";
-	add();	
-}
+	document.getElementById("d1").innerHTML="você pressionou um tecla alfabeto";
+	}	console.log("aplhabet key")	
+
 function otherkey()
 {
-	img_image="outras.png";
-	add();
-}
+	document.getElementById("d1").innerHTML="você pressionou um tecla alfabeto";
+	}	console.log("")
+
 	
